@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
+        <title>
+            {% if title %}
+                <title>
+                    Meulenhof - {{ title}}
+                </title>
+            {% else %}
+                <title>
+                    Meulenhof
+                </title>
+            {% endif %}
+        </title>
+    </head>
+    <body>
+        <ul class="navbar">
+            <li class="navitem"><a href="{% url 'training_home' %}">Training</a></li>
+            <li class="navitem"><a href="#">About</a></li>
+            <li class="navitem"><a href="#">Services</a></li>
+            <li class="navitem"><a href="#">Portfolio</a></li>
+            <li class="navitem"><a href="#">Contact</a></li>
+        </ul>
+        <div class="content">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </body>
+</html>
