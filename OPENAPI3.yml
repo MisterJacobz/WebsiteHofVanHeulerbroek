@@ -1,0 +1,51 @@
+openapi: "3.0.0"
+info:
+  description: "This is API documentation about the "
+  version: "1.0.0"
+  title: "Project for "
+paths:
+  /books/recommendations:
+    get:
+      tags:
+      - "books"
+      description: "Get list of book recommendations based on provided list of isbn13 numbers"
+      parameters:
+        - in: query
+          name: var1
+          description: description of var1
+          required: true
+          schema:
+            type: string
+            example: "example"
+        - in: "query"
+          name: "var2"
+          schema:
+            type: "number"
+          description: "some description"
+          example: 37
+      responses:
+        "200":
+          description: "Succesful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/component1"
+        "400":
+          description: "Bad request: Failed to read variables: []"
+        "401":
+          description: "Unauthorized."
+        "500":
+          description: "Internal server error."
+          
+
+components:
+  schemas:
+    component1:
+      type: "object"
+      properties:
+        a:
+          type: "number"
+        b:
+          type: "string"
+
+
