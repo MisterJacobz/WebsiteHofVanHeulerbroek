@@ -1,7 +1,50 @@
 {% extends "blog/base.html" %}
 {% load static %}
-<!-- {% block content%}
-            <div>
+{% block content%}
+            <!-- <div>
                 <img src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="hofvanheulerbroek">
+            </div> -->
+
+
+            <!-- <div>
+                <h1>Hof van Heulerbroek</h1>
+                <figure>
+                    <video controls autoplay>
+                        <source src="{% static 'blog/surroundings1.mp4' %}" type="video/mp4" style="width:50%">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>
+                            Hof van Heulerbroek heeft op .... Haar deuren geopend. Gelegen in de prachtige natuur van de
+                            Maasduinen in de kop van Noord Limburg vind je deze inspirerende vergaderlocatie. Natuurlijke
+                            materialen en zorgvuldig gekozen kleuren zorgen ervoor dat je je helemaal thuis voelt en je jezelf
+                            open kunt stellen voor nieuwe ideeën en ontwikkelingen.
+                            Buiten de vergaderlocatie waar je de beschikking hebt over een vergaderlocatie die zich op de eerste
+                            verdieping van het gebouw bevindt, is er een lunch/ontmoetingsruimte op de begane grond waar je
+                            kunt genieten van een korte pauze, lunch pauze en/of een borrelmoment aan het einde van de dag.
+                    </figcaption>
+                </figure>
+            </div> -->
+
+            <div class="home-container">
+                <div class="video-container">
+                <h1>Hof van Heulerbroek</h1>
+                    <figure>
+                        <video controls autoplay>
+                            <source src="{% static 'blog/surroundings1.mp4' %}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>
+                            Hof van Heulerbroek heeft op .... Haar deuren geopend. Gelegen in de prachtige natuur van de
+                            Maasduinen in de kop van Noord Limburg vind je deze inspirerende vergaderlocatie. Natuurlijke
+                            materialen en zorgvuldig gekozen kleuren zorgen ervoor dat je je helemaal thuis voelt en je jezelf
+                            open kunt stellen voor nieuwe ideeën en ontwikkelingen.
+                            Buiten de vergaderlocatie waar je de beschikking hebt over een vergaderlocatie die zich op de eerste
+                            verdieping van het gebouw bevindt, is er een lunch/ontmoetingsruimte op de begane grond waar je
+                            kunt genieten van een korte pauze, lunch pauze en/of een borrelmoment aan het einde van de dag.
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
-{% endblock content%} -->
+            
+              
+{% endblock content%}
