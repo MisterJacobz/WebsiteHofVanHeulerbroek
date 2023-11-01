@@ -22,6 +22,25 @@ li.navitem a:hover {
     background-color: #555; /* Background color for the links on hover */
 }
 
+ul.subnav {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+li.navitem:hover ul.subnav {
+    display: block;
+}
+
+ul.subnav li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
 /* Style the page content */
 .content {
     text-align: center;
@@ -51,4 +70,21 @@ li.navitem a:hover {
     max-width: 100%; /* Set max-width to match the width of the video */
     margin-top: 10px; /* Adjust the top margin as needed */
     text-align: center; /* Center the text within the caption */
+  }
+
+  .over-ons-container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .over-ons-image {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust margin as needed */
+  }
+
+  .over-ons-text {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }

@@ -18,12 +18,20 @@
     <body>
         <ul class="navbar">
             <li class="navitem"><a href="{% url 'home' %}">Home</a></li>
-            <li class="navitem"><a href="{% url 'training_home' %}">Training</a></li>
-            <li class="navitem"><a href="#">About</a></li>
-            <li class="navitem"><a href="#">Services</a></li>
-            <li class="navitem"><a href="#">Portfolio</a></li>
-            <li class="navitem"><a href="#">Contact</a></li>
+            <li class="navitem">
+                <a href="">Vergaderruimte</a>
+                <ul class="subnav">
+                    <li><a href="{% url 'vergaderruimte-info' %}">Info</a></li>
+                    <li><a href="{% url 'vergaderruimte-fotos' %}">Foto's</a></li>
+                    <li><a href="{% url 'vergaderruimte-prijzen' %}">Prijzen</a></li>
+                </ul>
+            </li>
+            <li class="navitem"><a href="{% url 'over-ons' %}">Over ons</a></li>
+            <li class="navitem"><a href="{% url 'route' %}">Route</a></li>
+            <li class="navitem"><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
+          
+
         <div class="content">
             {% block content %}
 

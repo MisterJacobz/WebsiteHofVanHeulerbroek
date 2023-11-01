@@ -18,8 +18,38 @@ posts = [
 def home(request):
     return render(request, 'blog/home.html')
 
-def training_home(request):
+def vergaderruimte_info(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/training_home.html', context)
+    return render(request, 'blog/vergaderruimte_info.html', context)
+
+def vergaderruimte_fotos(request):
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/vergaderruimte_fotos.html', context)
+
+def vergaderruimte_prijzen(request):
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/vergaderruimte_prijzen.html', context)
+
+def over_ons(request):
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/over_ons.html', context)
+
+def route(request):
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/route.html', context)
+
+def contact(request):
+    context = {
+        'posts': posts
+    }
+    return render(request, 'blog/contact.html', context)
