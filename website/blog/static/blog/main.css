@@ -88,3 +88,9 @@ ul.subnav li a {
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  /* Remove pixels on the left */
+  body{
+    margin:0;
+    padding:0;
+  }
