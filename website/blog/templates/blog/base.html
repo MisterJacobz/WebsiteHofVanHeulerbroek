@@ -4,19 +4,12 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
         <title>
-            {% if title %}
-                <title>
-                    Meulenhof - {{ title}}
-                </title>
-            {% else %}
-                <title>
-                    Meulenhof
-                </title>
-            {% endif %}
+            Hof van Heulerbroek
         </title>
     </head>
     <body>
         <ul class="navbar">
+            <li class="navitem"><img src="{% static 'blog/logo.jpeg' %}" height="64PX" alt="Hof van Heulerbroek logo"></li>
             <li class="navitem"><a href="{% url 'home' %}">Home</a></li>
             <li class="navitem">
                 <a href="">Vergaderruimte</a>

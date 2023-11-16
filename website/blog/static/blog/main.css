@@ -2,7 +2,7 @@ ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #333; /* Background color for the navbar */
+    background-color: #505F66; /* Background color for the navbar */
     overflow: hidden;
 }
 
@@ -14,12 +14,19 @@ li.navitem a {
     display: block;
     color: white; /* Text color for the links */
     text-align: center;
-    padding: 14px 16px;
+    padding: 21px 16px;
     text-decoration: none;
+    font-size: 18px;
+}
+
+.navitem img {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
 }
 
 li.navitem a:hover {
-    background-color: #555; /* Background color for the links on hover */
+    background-color: #3C4952; /* Background color for the links on hover */
 }
 
 ul.subnav {
@@ -53,44 +60,44 @@ ul.subnav li a {
     align-items: center;
   }
   
-  .video-container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Adjust the top margin as needed */
-  }
-  
-  video {
-    width: 100%;
-    height: auto; /* Adjust the height according to the aspect ratio */
-  }
-  
-  figcaption {
-    max-width: 100%; /* Set max-width to match the width of the video */
-    margin-top: 10px; /* Adjust the top margin as needed */
-    text-align: center; /* Center the text within the caption */
-  }
+.video-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
 
-  .over-ons-container {
-    display: flex;
-    align-items: flex-start;
-  }
+video {
+  width: 100%;
+  height: auto; /* Adjust the height according to the aspect ratio */
+}
 
-  .over-ons-image {
-    flex: 0 0 auto;
-    margin-right: 20px; /* Adjust margin as needed */
-  }
+figcaption {
+  max-width: 100%; /* Set max-width to match the width of the video */
+  margin-top: 10px; /* Adjust the top margin as needed */
+  text-align: center; /* Center the text within the caption */
+}
 
-  .over-ons-text {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+.over-ons-container {
+  display: flex;
+  align-items: flex-start;
+}
 
-  /* Remove pixels on the left */
-  body{
-    margin:0;
-    padding:0;
-  }
+.over-ons-image {
+  flex: 0 0 auto;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.over-ons-text {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Remove pixels on the left */
+body{
+  margin:0;
+  padding:0;
+}
