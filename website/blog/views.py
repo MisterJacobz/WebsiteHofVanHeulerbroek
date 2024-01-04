@@ -30,11 +30,11 @@ def vergaderruimte_fotos(request):
     }
     return render(request, 'blog/vergaderruimte_fotos.html', context)
 
-def vergaderruimte_prijzen(request):
+def vergaderruimte_tariven(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/vergaderruimte_prijzen.html', context)
+    return render(request, 'blog/vergaderruimte_tariven.html', context)
 
 def over_ons(request):
     context = {
