@@ -92,6 +92,7 @@ figure {
 
 figcaption {
   font-family: 'Arial', sans-serif;
+  color: #FFFFFF;
   max-width: 100%; /* Set max-width to match the width of the video */
   margin-top: 10px; /* Adjust the top margin as needed */
   text-align: center; /* Center the text within the caption */
@@ -125,14 +126,14 @@ body {
 
 h1 {
   font-size: 3em;
-  color: #39474E;
+  color: #FFFFFF;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin: 0 0;
 }
 
 h3 {
   font-size: 1em;
-  color: #39474E;
+  color: #FFFFFF;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin: 10px 0;
 }
