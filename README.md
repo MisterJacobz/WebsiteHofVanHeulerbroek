@@ -11,7 +11,6 @@ Logo bovenaan de home pagina, indien mogelijk een transperant logo van Elke krij
 Navbar items centreren
 foto van parkeerplaats zettten bij route
 B&B toevoegen aan navbar, pagina vullen met comming soon
-prijzen -> tariven
 reserveren toevoegen aan subnav
 lettertype figcaption vergroten
 reviews toevoegen aan subnav voor B&B en vergaderruimte

@@ -18,23 +18,11 @@ posts = [
 def home(request):
     return render(request, 'blog/home.html')
 
-def vergaderruimte_info(request):
+def vergaderruimte(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/vergaderruimte_info.html', context)
-
-def vergaderruimte_fotos(request):
-    context = {
-        'posts': posts
-    }
-    return render(request, 'blog/vergaderruimte_fotos.html', context)
-
-def vergaderruimte_tariven(request):
-    context = {
-        'posts': posts
-    }
-    return render(request, 'blog/vergaderruimte_tariven.html', context)
+    return render(request, 'blog/vergaderruimte.html', context)
 
 def over_ons(request):
     context = {

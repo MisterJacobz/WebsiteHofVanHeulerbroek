@@ -2,27 +2,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Other meta tags and stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
         <title>
             Hof van Heulerbroek
         </title>
     </head>
     <body>
-        <ul class="navbar">
-            <li class="navitem"><img src="{% static 'blog/logo_navbar.jpeg' %}" height="64PX" alt="Hof van Heulerbroek logo"></li>
-            <li class="navitem"><a href="{% url 'home' %}">Home</a></li>
-            <li class="navitem">
-                <a href="">Vergaderruimte</a>
-                <ul class="subnav">
-                    <li><a href="{% url 'vergaderruimte-info' %}">Info</a></li>
-                    <li><a href="{% url 'vergaderruimte-fotos' %}">Foto's</a></li>
-                    <li><a href="{% url 'vergaderruimte-tariven' %}">Tariven</a></li>
-                </ul>
-            </li>
-            <li class="navitem"><a href="{% url 'over-ons' %}">Over ons</a></li>
-            <li class="navitem"><a href="{% url 'route' %}">Route</a></li>
-            <li class="navitem"><a href="{% url 'contact' %}">Contact</a></li>
-        </ul>
+        <div class="topnav" id="myTopnav">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'vergaderruimte' %}">Vergaderruimte</a>
+            <a href="{% url 'over-ons' %}">Over ons</a>
+            <a href="{% url 'route' %}">Route</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggle_function()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
           
 
         <div class="content">
@@ -30,5 +27,17 @@
 
             {% endblock %}
         </div>
+
+
+        <script>
+            function toggle_function() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
     </body>
 </html>
