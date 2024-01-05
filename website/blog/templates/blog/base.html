@@ -28,6 +28,24 @@
             {% endblock %}
         </div>
 
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <ul>
+                    <li onclick="copyText('info@hofvanheulerbroek.nl')">
+                        <a><i class="fas fa-envelope"></i> info@hofvanheulerbroek.nl</a>
+                    </li>
+                    <li onclick="copyText('+31 6 12345678')">
+                        <a><i class="fas fa-phone"></i> +31 6 12345678</a>
+                    </li>
+                    <li><a href="https://www.instagram.com/hofvanheulerbroek/?hl=en"><i class="fab fa-instagram"></i> Volg ons op Instagram</a></li>
+                    <li onclick="copyText('Rijksweg 22A, Bergen')">
+                        <a><i class="fas fa-map-marker-alt"></i> Rijksweg 22A, Bergen</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
         <script>
             function toggle_function() {
@@ -37,6 +55,16 @@
                 } else {
                     x.className = "topnav";
                 }
+            }
+
+            function copyText(text) {
+                var input = document.createElement('input');
+                input.setAttribute('value', text);
+                document.body.appendChild(input);
+                input.select();
+                var result = document.execCommand('copy');
+                document.body.removeChild(input);
+
             }
         </script>
     </body>

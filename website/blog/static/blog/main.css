@@ -26,7 +26,7 @@
 When the screen is less than 600 pixels wide, hide all links.
 Show the link that contains should open and close the topnav (.icon) 
 */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1080px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -38,7 +38,7 @@ Show the link that contains should open and close the topnav (.icon)
 The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
 This class makes the topnav look good on small screens (display the links vertically instead of horizontally)
 */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1080px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -59,85 +59,6 @@ This class makes the topnav look good on small screens (display the links vertic
 .subnav:hover .subnav_items {
   display: block;
 }
-
-
-
-/* .navbar-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-.dot {
-  width: 20px;
-  height: 4px;
-  background-color: #000;
-  margin: 4px 0;
-}
-
-@media (max-width: 768px) {
-  .navbar-items {
-    display: none;
-  }
-
-  .navbar-toggle {
-    display: block;
-  }
-} */
-
-
-
-
-/* ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #505F66;  Background color for the navbar 
-    overflow: hidden;
-    width: 100%;
-    top: 0;
-}
-
-li.navitem {
-    float: left;
-}
-
-li.navitem a {
-    display: block;
-    color: white;  Text color for the links 
-    text-align: center;
-    padding: 21px 16px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.navitem img {
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-}
-
-li.navitem a:hover {
-    background-color: #3C4952;  Background color for the links on hover 
-}
-
-ul.subnav {
-    display: none;
-    position: absolute;
-    background-color: #7A8C95;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-
-li.navitem:hover ul.subnav {
-    display: block;
-}
-
-ul.subnav li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  } */
   
 /* Style the page content */
 .content {
@@ -231,3 +152,59 @@ h3 {
   text-align: center;
   width: 50%;
 }
+
+.footer{
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+
+
+.footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.9em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+
+
+.footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  /* .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  } */
+  
+  @media (max-width:1080px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
