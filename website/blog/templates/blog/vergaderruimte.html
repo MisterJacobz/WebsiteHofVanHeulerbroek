@@ -2,6 +2,34 @@
 {% load static %}
 {% block content%}
 
+    {% for conference_room in conference_room %}
+        <div>
+            <h2>{{ conference_room.name }}</h2>
+            <p>Prijs 1 dagdeel: {{ conference_room.daypart_1_price }}</p>
+            <p>Prijs 2 dagdelen: {{ conference_room.daypart_2_price }}</p>
+            <p>Lunch prijs per persoon: {{ conference_room.lunch_price_per_person }}</p>
+            <p>Luxe lunch bestaande uit: {{ conference_room.lunch_items }}</p>
+        </div>
+
+    {% endfor %}
+
+    <table>
+        <thead>
+            <tr>
+            <th>Item</th>
+            <th>Prijs (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for menu_item in menu_items %}
+            <tr>
+                <td>{{ menu_item.name }}</td>
+                <td>{{ menu_item.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
     <p>Unieke vergaderruimte en trainingslocatie</p>
 
     <p>1. Bij Hof van Heulerbroek kun je terecht voor exclusieve verhuur van ruimte voor zakelijke

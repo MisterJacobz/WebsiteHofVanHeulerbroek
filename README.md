@@ -17,3 +17,9 @@ reviews toevoegen aan subnav voor B&B en vergaderruimte
 omgeving toevoegen aan navbar met meerdere foto's en beide videos
 subnav voor omgeving: omgeving, route (x km)
 B&B subnav activiteiten: padelbaan
+
+# Developing details
+`docker-compose up --build` for running website
+`python3 manage.py makemigrations` for making migrations
+`python3 manage.py migrate` for applying migrations
+`python3 manage.py sqlmigrate <name> <migration_number>` for seeing sql migration code. Example: `python3 manage.py sqlmigrate blog 0001`
