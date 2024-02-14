@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import ConferenceRoom, MenuItems, Reservation
+from .models import ConferenceRoom, MenuItems, MenuItemsExtraInfo, Reservation
 
 posts = [
     {'author': 'Henk 1',
@@ -23,6 +23,7 @@ def vergaderruimte(request):
     context = {
         'conference_room': ConferenceRoom.objects.all(),
         'menu_items': MenuItems.objects.all(),
+        'menu_items_extra_info': MenuItemsExtraInfo.objects.all(),
         'reservations': Reservation.objects.all()
     }
     return render(request, 'blog/vergaderruimte.html', context)

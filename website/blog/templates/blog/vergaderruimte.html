@@ -2,33 +2,46 @@
 {% load static %}
 {% block content%}
 
+    <div>
+        <img src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="Hof van Heulerbroek vergaderruimte">
+    </div>
+
     {% for conference_room in conference_room %}
         <div>
-            <h2>{{ conference_room.name }}</h2>
+            <h1>{{ conference_room.name }}</h1>
             <p>Prijs 1 dagdeel: {{ conference_room.daypart_1_price }}</p>
             <p>Prijs 2 dagdelen: {{ conference_room.daypart_2_price }}</p>
-            <p>Lunch prijs per persoon: {{ conference_room.lunch_price_per_person }}</p>
-            <p>Luxe lunch bestaande uit: {{ conference_room.lunch_items }}</p>
+            <p>Lunch prijs per persoon: {{ conference_room.lunch_price_per_person }}€</p>
+            <pre class="vergaderruimte-pre-tag">{{ conference_room.extra_info }}</pre>
         </div>
 
     {% endfor %}
 
-    <table>
+    <table class="vergaderruimte-tabel">
         <thead>
             <tr>
-                <th style="border: 1px solid black;">Item</th>
-                <th style="border: 1px solid black;">Prijs (€)</th>
+                <th>Item</th>
+                <th>Prijs (€)</th>
             </tr>
         </thead>
         <tbody>
             {% for menu_item in menu_items %}
             <tr>
-                <td style="border: 1px solid black;">{{ menu_item.name }}</td>
-                <td style="border: 1px solid black;">{{ menu_item.price }}</td>
+                <td>{{ menu_item.name }}</td>
+                <td>{{ menu_item.price }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+
+    </br>
+
+    {% for extra_info in menu_items_extra_info %}
+        <div>
+            <td>{{ extra_info.reference }}</td>
+            <td>{{ extra_info.info }}</td>
+        </div>
+    {% endfor %}
     
 
     <p>Unieke vergaderruimte en trainingslocatie</p>
@@ -66,8 +79,6 @@
     <p>Nachos met gesmolten kaas en quacamole €4,95 pp.</p>
     <p>- Uitbreiding of een voorstel op maat is mogelijk.</p>
 
-    <div>
-        <img src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="Hof van Heulerbroek accomodatie">
-    </div>
+    
     
 {% endblock content%}

@@ -5,6 +5,45 @@
             <!-- <h1>Hof van Heulerbroek</h1>
             <h3>Unieke vergaderruimte en trainingslocatie</h3> -->
 
+            <div class="slowfade-wrapper">
+                <div class="slides slowFade">
+                    <div class="slide">
+                        <img src="{% static 'blog/sfeer_impressie_vanaf_tuin.jpg' %}" alt="img"/>
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'blog/bed_and_breakfast_scetch.jpg' %}" alt="img"/>
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'blog/vanaf_rijksweg.jpg' %}" alt="img"/>
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'blog/up_front_view_scetch.jpg' %}" alt="img"/>
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'blog/steiger_afbreken.jpg' %}" alt="img"/>
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'blog/we_are_building.jpg' %}" alt="img"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="home-container">
+                <div class="home-page-slideshow">
+                    <img src="{% static 'blog/sfeer_impressie_vanaf_tuin.jpeg' %}" alt="Sfeer Hof van Heulerbroek vanaf tuin">
+                    <img src="{% static 'blog/bed_and_breakfast_scetch.jpeg' %}" alt="Hof van Heulerbroek scetch of B&B">
+                    <img src="{% static 'blog/vanaf_rijksweg.jpeg' %}" alt="Hof van Heulerbroek vanaf de Rijksweg gezien">
+                    <img src="{% static 'blog/up_front_view_scetch.jpeg' %}" alt="Hof van Heulerbroek voor en bovenaanzicht">
+                    <img src="{% static 'blog/foto_vanaf_de_tuin.jpeg' %}" alt="Hof van Heulerbroek vanaf de tuin">
+                    <img src="{% static 'blog/fundering.jpeg' %}" alt="Hof van Heulerbroek fundering">
+                    <img src="{% static 'blog/hans_aan_het_werk.jpeg' %}" alt="Hans op de machine">
+                    <img src="{% static 'blog/hans_en_lonneke_aan_het_werk.jpeg' %}" alt="Hans en Lonneke aan het werk">
+                    <img src="{% static 'blog/omgeving_uitleg.jpeg' %}" alt="Heulerbroek is Heuloërbroek">
+                    <img src="{% static 'blog/steiger_afbreken.jpeg' %}" alt="Steiger afbreken">
+                    <img src="{% static 'blog/we_are_building.jpeg' %}" alt="We zijn aan het bouwen">
+                </div>
+            </div> -->
+
             <div class="home-container">
                 <div class="video-container">
                     <figure>
@@ -53,6 +92,21 @@
                     </figure>
                 </div>
             </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                let images = document.querySelectorAll('.home-page-slideshow img');
+                let index = 0;
+
+                function showNextImage() {
+                    images[index].style.display = 'none'; // Hide current image
+                    index = (index + 1) % images.length; // Increment index
+                    images[index].style.display = 'block'; // Show next image
+                }
+
+                setInterval(showNextImage, 10000); // Change image every 10 seconds
+                });
+            </script>
             
               
 {% endblock content%}

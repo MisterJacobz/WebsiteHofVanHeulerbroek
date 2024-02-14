@@ -7,7 +7,7 @@ class ConferenceRoom(models.Model):
     daypart_1_price = models.DecimalField(max_digits=6, decimal_places=2, default=350)
     daypart_2_price = models.DecimalField(max_digits=6, decimal_places=2, default=500)
     lunch_price_per_person = models.DecimalField(max_digits=5, decimal_places=2, default=25)
-    lunch_items = models.CharField(max_length=1000)
+    extra_info = models.CharField(max_length=2000)
 
 class MenuItems(models.Model):
     name = models.CharField(max_length=100)

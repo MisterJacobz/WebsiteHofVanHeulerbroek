@@ -15,7 +15,7 @@ def initialize_data():
         daypart_1_price=350.00,
         daypart_2_price=500,
         lunch_price_per_person=25.00,
-        lunch_items="Broodje met beleg"
+        extra_info="Onbeperkt verse koffie van onze koffiebonenmachine en thee naar keuze (verse munt/gember/honing)\nOnbeperkt handfruit, gekoeld water, zoete en hartige lekkernijen\nOok is er een mogelijkheid voor een luxe lunch, bestaande uit vers verschillend belegd brood, salade, soep alles bereid met verse en gezonde ingrediënten.\nDiverse sappen en melk zijn onbeperkt aanwezig."
     )
 
     MenuItems.objects.create(name="Cola", price=2.50)
@@ -27,9 +27,9 @@ def initialize_data():
     MenuItems.objects.create(name="Appeltaart", price=4.95)
     MenuItems.objects.create(name="Cake", price=3.50)
     MenuItems.objects.create(name="Verse fruitsalade met fruit uit het seizoen", price=4.95)
-    MenuItems.objects.create(name="Uitgebreide borrelplank¹", price=12.50)
+    MenuItems.objects.create(name="Uitgebreide borrelplank ¹", price=12.50)
     MenuItemsExtraInfo.objects.create(reference="¹", info="Een rijk gevulde plank met oa verschillende soorten worst, ham, kazen, noten, rauwkost, diverse soorten dips, flatbread")
-    MenuItems.objects.create(name="Borrelplank 'nog even bijpraten'²", price=7.75)
+    MenuItems.objects.create(name="Borrelplank 'nog even bijpraten' ²", price=7.75)
     MenuItemsExtraInfo.objects.create(reference="²", info="Deze borrelplank bevat groente chips, nootjes, kaaskrokantjes en olijven")
 
 if __name__ == "__main__":
