@@ -16,19 +16,20 @@
     <table>
         <thead>
             <tr>
-            <th>Item</th>
-            <th>Prijs (€)</th>
+                <th style="border: 1px solid black;">Item</th>
+                <th style="border: 1px solid black;">Prijs (€)</th>
             </tr>
         </thead>
         <tbody>
             {% for menu_item in menu_items %}
             <tr>
-                <td>{{ menu_item.name }}</td>
-                <td>{{ menu_item.price }}</td>
+                <td style="border: 1px solid black;">{{ menu_item.name }}</td>
+                <td style="border: 1px solid black;">{{ menu_item.price }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+    
 
     <p>Unieke vergaderruimte en trainingslocatie</p>
 

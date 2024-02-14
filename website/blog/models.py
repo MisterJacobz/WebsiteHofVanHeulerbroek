@@ -13,6 +13,10 @@ class MenuItems(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=5, decimal_places=2)
 
+class MenuItemsExtraInfo(models.Model):
+    reference = models.CharField(max_length=1)
+    info = models.CharField(max_length=200)
+
 class Reservation(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
