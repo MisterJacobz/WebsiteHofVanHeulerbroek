@@ -1,0 +1,86 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content%}
+
+    <div>
+        <img src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="Hof van Heulerbroek vergaderruimte">
+    </div>
+
+    <h1 style="text-align: center">Coming Soon</h1>
+
+    <!-- {% for conference_room in conference_room %}
+        <div>
+            <h1>{{ conference_room.name }}</h1>
+            <p>Prijs 1 dagdeel: {{ conference_room.daypart_1_price }}</p>
+            <p>Prijs 2 dagdelen: {{ conference_room.daypart_2_price }}</p>
+            <p>Lunch prijs per persoon: {{ conference_room.lunch_price_per_person }}€</p>
+            <pre class="vergaderruimte-pre-tag">{{ conference_room.extra_info }}</pre>
+        </div>
+
+    {% endfor %}
+
+    <table class="vergaderruimte-tabel">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Prijs (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for menu_item in menu_items %}
+            <tr>
+                <td>{{ menu_item.name }}</td>
+                <td>{{ menu_item.price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    </br>
+
+    {% for extra_info in menu_items_extra_info %}
+        <div>
+            <td>{{ extra_info.reference }}</td>
+            <td>{{ extra_info.info }}</td>
+        </div>
+    {% endfor %}
+    
+
+    <p>Unieke vergaderruimte en trainingslocatie</p>
+
+    <p>1. Bij Hof van Heulerbroek kun je terecht voor exclusieve verhuur van ruimte voor zakelijke
+    bijeenkomsten zoals vergaderen, brainstormsessies, trainingen, coaching en strategie
+    sessies.</p>
+    <p>2. Op deze inspirerende vergaderplek word je met persoonlijke aandacht, warmte en
+    enthousiasme ontvangen. Wij zorgen ervoor dat de organisatie van jouw vergadering,
+    teamdag, training, coaching of heisessie op rolletjes loopt zonder hierbij al te zichtbaar te
+    zijn.</p>
+    <p>3. Een prachtige locatie midden in de landelijke omgeving van de Maasduinen in Noord
+    Limburg. Een plek midden in het groen waar je je even helemaal weg waant en waar je je
+    thuis voelt</p>
+
+    <p>Tarieven:</p>
+    <p>Groepen tot 10 personen</p>
+    <p>- 1 dagdeel €650-€475</p>
+    <p>- 3 dagdelen € 750- €590</p>
+    <p>- Extra uur; €125</p>
+
+    <p>Eten en drinken</p>
+    <p>- Onbeperkt verse koffie van onze koffiebonenmachine en thee naar keuze; verse</p>
+    <p>munt/gember/honing, onbeperkt handfruit, gekoeld water, zoete en hartige lekkernijen</p>
+    <p> 1 dagdeel: €14,50 pp</p>
+    <p>2 dagdelen: €23,50</p>
+    <p> - Luxe lunch, een lunch bestaande uit vers verschillend belegd brood, salade, soep alles bereid</p>
+    <p>met verse en gezonde ingrediënten. Diverse sappen en melk zijn onbeperkt aanwezig. €25,50 pp</p>
+    <p> - Fris, alcohol; per consumptie € </p>
+    <p>- Pauzes; keuze uit smoothie €5,95 pp, appeltaart €4,95 pp, cake €3,50 pp, vers fruitsalade </p>
+    <p>met fruit uit het seizoen €4,95 pp, nachos met gesmolten kaas en quacamole €4,95 pp</p>
+    <p>- Afsluitende borrel; uitgebreide borrelplank  een rijk gevulde plank met oa verschillende</p>
+    <p>soorten worst, ham, kazen, noten, rauwkost, diverse soorten dips, flatbread €12,50 pp.</p>
+    <p>Borrelplank 'nog even bijpraten' -> groente chips, nootjes, kaaskorkantjes, olijven €7,75 pp.</p>
+    <p>Nachos met gesmolten kaas en quacamole €4,95 pp.</p>
+    <p>- Uitbreiding of een voorstel op maat is mogelijk.</p> -->
+
+    
+    
+{% endblock content%}

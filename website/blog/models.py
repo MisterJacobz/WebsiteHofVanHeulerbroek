@@ -25,5 +25,6 @@ class Reservation(models.Model):
     reservation_datetime_start = models.DateTimeField(default=timezone.now)
     reservation_datetime_finish = models.DateTimeField(default=timezone.now)
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    reservation_type = models.CharField(max_length=1, default='c') # 'c' = conference room, 'b' = bed and breakfast
     # account = models.ForeignKey(User, on_delete=models.CASCADE)
 

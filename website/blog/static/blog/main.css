@@ -4,8 +4,8 @@
 }
 
 .topnav a {
-  float: left;
-  display: block;
+  /* float: left; */
+  display:inline-block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -73,11 +73,11 @@ This class makes the topnav look good on small screens (display the links vertic
   }
   
 .video-container {
-  width: 80%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px; /* Adjust the top margin as needed */
+  /*margin-top: 20px; /* Adjust the top margin as needed */
 }
 
 video {
@@ -110,19 +110,19 @@ figcaption {
 
 .over-ons-container {
   display: flex;
-  align-items: flex-start;
+  height: 100%;
+}
+
+.over-ons-left .over-ons-right{
+  width: 50%;
+  box-sizing: border-box;
 }
 
 .over-ons-image {
-  flex: 0 0 auto;
-  margin-right: 20px; /* Adjust margin as needed */
-}
-
-.over-ons-text {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Remove pixels on the left */
@@ -149,8 +149,11 @@ body {
 }
 
 .centered-text {
-  text-align: center;
   width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  font-family: Arial, sans-serif; 
+  font-size: 20px;
 }
 
 .footer{
@@ -217,6 +220,7 @@ margin:0% 3%;
 .vergaderruimte-tabel {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
 }
 
 .vergaderruimte-tabel td {

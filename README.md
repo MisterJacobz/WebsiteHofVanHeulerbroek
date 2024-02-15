@@ -6,10 +6,7 @@ This website is developed for the conference room and B&B rental organization Ho
 Meerdere foto's op home pagina
 kleinere foto bij over ons
 misschien overleggen met elke voor toepasselijke kleur tekst bij achtergrond en logo
-Logo bovenaan de home pagina, indien mogelijk een transperant logo van Elke krijgen
-Navbar items centreren
 foto van parkeerplaats zettten bij route
-B&B toevoegen aan navbar, pagina vullen met comming soon
 reserveren toevoegen aan subnav
 lettertype figcaption vergroten
 reviews toevoegen aan subnav voor B&B en vergaderruimte

@@ -24,21 +24,24 @@ def vergaderruimte(request):
         'conference_room': ConferenceRoom.objects.all(),
         'menu_items': MenuItems.objects.all(),
         'menu_items_extra_info': MenuItemsExtraInfo.objects.all(),
-        'reservations': Reservation.objects.all()
+        'reservations': Reservation.objects.filter(reservation_type='c')
     }
     return render(request, 'blog/vergaderruimte.html', context)
 
-def over_ons(request):
+def bed_and_breakfast(request):
     context = {
-        'posts': posts
+        'reservations': Reservation.objects.filter(reservation_type='b')
     }
-    return render(request, 'blog/over_ons.html', context)
+    return render(request, 'blog/bed_and_breakfast.html', context)
 
-def route(request):
+def over_ons(request):
+    return render(request, 'blog/over_ons.html')
+
+def omgeving(request):
     context = {
         'posts': posts
     }
-    return render(request, 'blog/route.html', context)
+    return render(request, 'blog/omgeving.html', context)
 
 def contact(request):
     context = {
