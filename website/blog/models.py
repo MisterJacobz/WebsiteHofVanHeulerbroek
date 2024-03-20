@@ -18,9 +18,14 @@ class MenuItemsExtraInfo(models.Model):
     info = models.CharField(max_length=200)
 
 class ConferenceRoomReservation(models.Model):
-    group_name = models.CharField(max_length=100)
-    name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    group_name = models.CharField(max_length=100, default='')
+    group_size = models.IntegerField(default=1)
+    name = models.CharField(max_length=100, default='')
+    email = models.CharField(max_length=100, default='')
+    phone_number = models.CharField(max_length=15, default='')
+    address = models.CharField(max_length=100, default='')
+    zipcode = models.CharField(max_length=10, default='')
+    city = models.CharField(max_length=50, default='')
     creation_datetime = models.DateTimeField(default=timezone.now)
     reservation_datetime_start = models.DateTimeField(default=timezone.now)
     reservation_datetime_finish = models.DateTimeField(default=timezone.now)

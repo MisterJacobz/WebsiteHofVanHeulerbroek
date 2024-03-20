@@ -4,19 +4,35 @@ from .models import ConferenceRoom, MenuItems, MenuItemsExtraInfo, ConferenceRoo
 from .forms import ConferenceRoomReservationForm
 from django.core.mail import send_mail
 from decouple import config
+from django.template.loader import render_to_string
 
-posts = [
-    {'author': 'Henk 1',
-    'title': 'Post 1',
-    'content': 'Some random text',
-    'date_posted': '11 Oktober'
-    },
-    {'author': 'Henk 2',
-    'title': 'Post 2',
-    'content': 'Some random text',
-    'date_posted': '11 Oktober'
-    }
-]
+conference_room_reservation_request1 = """
+Beste __name,
+
+Uw aanvraag voor het reserveren van de vergaderruimte is in goede orde ontvangen. U zult binnenkort iets van ons te horen krijgen voor verder overleg.
+Hieronder de opgegeven gegevens:
+Groepsnaam: __group_name
+Aantal personen: __group_size
+Telefoonnummer: __phone_number
+Adres: __address
+Postcode: __zipcode
+Plaats: __city
+Aanvang: __reservation_datetime_start
+Einde: __reservation_datetime_finish
+"""
+
+conference_room_reservation_request2 = """
+Aanvraag binnen van __name:
+Groepsnaam: __group_name
+email: __email
+Aantal personen: __group_size
+Telefoonnummer: __phone_number
+Adres: __address
+Postcode: __zipcode
+Plaats: __city
+Aanvang: __reservation_datetime_start
+Einde: __reservation_datetime_finish
+"""
 
 # Create your views here.
 def home(request):
@@ -25,15 +41,24 @@ def home(request):
 def vergaderruimte(request):
     if request.method == "POST":
         form = ConferenceRoomReservationForm(request.POST)
+        values = request.POST.dict()
         if form.is_valid():
-            print("form = ", form)
-            print("Thing = ", config('EMAIL_HOST_USER'))
-            message = "Test"
+            email_html1 = conference_room_reservation_request1
+            email_html2 = conference_room_reservation_request2
+            for key, val in values.items():
+                email_html1 = email_html1.replace('__'+key, val)
+                email_html2 = email_html2.replace('__'+key, val)
             send_mail(
                 "Aanvraag voor reservering vergaderruimte",
-                message,
+                email_html1,
                 config('EMAIL_HOST_USER'),
-                ["harjacobz@gmail.com"]
+                [values.get('email')]
+            )
+            send_mail(
+                "Aanvraag voor reservering vergaderruimte",
+                email_html2,
+                config('EMAIL_HOST_USER'),
+                [config('EMAIL_HOST_USER')]
             )
             form.save()
             return redirect("home")
