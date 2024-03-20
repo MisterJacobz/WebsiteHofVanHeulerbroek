@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import ConferenceRoom, MenuItems, MenuItemsExtraInfo, Reservation
+from .models import ConferenceRoom, MenuItems, MenuItemsExtraInfo, ConferenceRoomReservation
+from .forms import ConferenceRoomReservationForm
+from django.core.mail import send_mail
+from decouple import config
 
 posts = [
     {'author': 'Henk 1',
@@ -20,17 +23,35 @@ def home(request):
     return render(request, 'blog/home.html')
 
 def vergaderruimte(request):
+    if request.method == "POST":
+        form = ConferenceRoomReservationForm(request.POST)
+        if form.is_valid():
+            print("form = ", form)
+            print("Thing = ", config('EMAIL_HOST_USER'))
+            message = "Test"
+            send_mail(
+                "Aanvraag voor reservering vergaderruimte",
+                message,
+                config('EMAIL_HOST_USER'),
+                ["harjacobz@gmail.com"]
+            )
+            form.save()
+            return redirect("home")
+
+    else:
+        form = ConferenceRoomReservationForm()
     context = {
         'conference_room': ConferenceRoom.objects.all(),
         'menu_items': MenuItems.objects.all(),
         'menu_items_extra_info': MenuItemsExtraInfo.objects.all(),
-        'reservations': Reservation.objects.filter(reservation_type='c')
+        'reservations': ConferenceRoomReservation.objects.all(), #filter(reservation_type='c'),
+        'form': form,
     }
     return render(request, 'blog/vergaderruimte.html', context)
 
 def bed_and_breakfast(request):
     context = {
-        'reservations': Reservation.objects.filter(reservation_type='b')
+        'reservations': ConferenceRoomReservation.objects.all(), #filter(reservation_type='b')
     }
     return render(request, 'blog/bed_and_breakfast.html', context)
 

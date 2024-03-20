@@ -6,6 +6,12 @@
         <img src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="Hof van Heulerbroek vergaderruimte">
     </div>
 
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
     {% for conference_room in conference_room %}
         <div>
             <h1>{{ conference_room.name }}</h1>
