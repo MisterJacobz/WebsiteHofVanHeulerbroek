@@ -1,6 +1,9 @@
 .topnav {
   overflow: hidden;
   background-color: #333;
+  position: fixed; /* Stick navbar to the top */
+  width: 100%; /* Full width */
+  top: 0; /* Position it at the top of the page */
 }
 
 .topnav a {
@@ -63,7 +66,7 @@ This class makes the topnav look good on small screens (display the links vertic
 /* Style the page content */
 .content {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 4em;
 }
 
 .home-container {
@@ -119,13 +122,11 @@ figcaption {
     max-width: 60%; /* Limit image width to 60% of its original width */
     /* width: 100%; Ensure image spans 100% of its container's width */
     height: auto; /* Maintain aspect ratio */
-    margin-top: 1.5em;
 }
 
 .over-ons-text {
     flex: auto; /* Allow text to grow more than image, but limit its shrinking */
     max-width: 60%; /* Limit image width to 60% of container width */
-    margin-top: 1.5em;
     margin-right: 20px;
     align-self: center;
 }
