@@ -26,7 +26,7 @@
 When the screen is less than 600 pixels wide, hide all links.
 Show the link that contains should open and close the topnav (.icon) 
 */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -38,7 +38,7 @@ Show the link that contains should open and close the topnav (.icon)
 The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
 This class makes the topnav look good on small screens (display the links vertically instead of horizontally)
 */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 768px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -110,20 +110,44 @@ figcaption {
 
 .over-ons-container {
   display: flex;
-  height: 100%;
-}
-
-.over-ons-left .over-ons-right{
-  width: 50%;
-  box-sizing: border-box;
+  align-items: flex-start;
 }
 
 .over-ons-image {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: 0 auto;
+    flex: auto; /* Allow image to grow and shrink */
+    margin-right: 0px; /* Space between image and text */
+    max-width: 60%; /* Limit image width to 60% of its original width */
+    /* width: 100%; Ensure image spans 100% of its container's width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 1.5em;
 }
+
+.over-ons-text {
+    flex: auto; /* Allow text to grow more than image, but limit its shrinking */
+    max-width: 60%; /* Limit image width to 60% of container width */
+    margin-top: 1.5em;
+    margin-right: 20px;
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+  .over-ons-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  .over-ons-image {
+    margin-right: 0; /* Remove margin for smaller screens */
+    margin-bottom: 20px; /* Add some space between image and text */
+  }
+  .over-ons-text {
+    max-width: 100%; /* Limit image width to 60% of container width */
+}
+}
+
+/* .over-ons-left .over-ons-right{
+  width: 50%;
+  box-sizing: border-box;
+} */
+
 
 /* Remove pixels on the left */
 body {
@@ -152,8 +176,6 @@ body {
   width: 50%;
   margin: 0 auto;
   padding-top: 10px;
-  font-family: Arial, sans-serif; 
-  font-size: 20px;
 }
 
 .footer{
@@ -197,7 +219,7 @@ font-size:2em;
 margin:0% 1%;
 } */
 
-@media (max-width:1080px){
+@media (max-width:768px){
 .footer{
 text-align:left;
 padding:5%;
@@ -327,4 +349,36 @@ margin:0% 3%;
   40% {
       opacity: 0;
   }
+}
+
+
+.omgeving-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.omgeving-video-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.omgeving-text {
+  width: 60%;
+  margin: 0 auto;
+  /* padding-top: 10px; */
+}
+
+@media (max-width: 768px) {
+  .omgeving-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  .omgeving-video-container {
+    width: 90%;
+  }
+  .omgeving-text {
+    max-width: 100%; /* Limit image width to 60% of container width */
+}
 }
