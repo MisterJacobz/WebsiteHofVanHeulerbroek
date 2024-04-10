@@ -6,11 +6,17 @@
         <img src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="Hof van Heulerbroek vergaderruimte">
     </div>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-    </form>
+    <h2>
+        Interesse, vraag een offerte aan:
+    </h2>
+
+    <div class="form-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="form_submit_button" type="submit">Submit</button>
+        </form>
+    </div>
 
     {% for conference_room in conference_room %}
         <div>
@@ -85,6 +91,4 @@
     <p>Nachos met gesmolten kaas en quacamole €4,95 pp.</p>
     <p>- Uitbreiding of een voorstel op maat is mogelijk.</p>
 
-    
-    
 {% endblock content%}
