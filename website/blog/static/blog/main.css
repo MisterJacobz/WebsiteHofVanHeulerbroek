@@ -55,10 +55,11 @@ This class makes the topnav look good on small screens (display the links vertic
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+  .topnav.responsive a.navtext {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
+    margin-right: 30px;
   }
 }
 
@@ -389,6 +390,14 @@ margin:0% 3%;
   .omgeving-text {
     max-width: 100%; /* Limit image width to 60% of container width */
 }
+}
+
+.home-page-logo{
+  background-color: transparent;
+  position: absolute;
+  top: 40%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the element precisely */
 }
 
 /* Slowfade fullscreen*/
