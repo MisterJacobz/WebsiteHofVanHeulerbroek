@@ -4,6 +4,7 @@
   position: fixed; /* Stick navbar to the top */
   width: 100%; /* Full width */
   top: 0; /* Position it at the top of the page */
+  margin-top: 0.5em;
 }
 
 .topnav a {
@@ -411,8 +412,8 @@ margin:0% 3%;
           backface-visibility: hidden;
   opacity: 0;
   transform: scale(1.5) rotate(15deg);
-  -webkit-animation: slowFadeFullscreen 50s infinite;
-          animation: slowFadeFullscreen 50s infinite;
+  -webkit-animation: slowFadeFullscreen 60s infinite;
+          animation: slowFadeFullscreen 60s infinite;
 }
 .slowFadeFullscreen .slideFullscreen:nth-child(0) img {
   -webkit-animation-delay: 0s;
@@ -453,7 +454,4 @@ margin:0% 3%;
       opacity: 1;
       transform: scale(1) rotate(0);
   }
-  /* 40% {
-      opacity: 0;
-  } */
 }
