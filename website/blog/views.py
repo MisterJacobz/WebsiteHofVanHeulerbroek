@@ -85,12 +85,13 @@ def over_ons(request):
 
 def omgeving(request):
     context = {
-        'posts': posts
+        # 'posts': posts
     }
     return render(request, 'blog/omgeving.html', context)
 
 def contact(request):
     context = {
-        'posts': posts
+        # 'posts': posts
     }
     return render(request, 'blog/contact.html', context)
+

@@ -2,13 +2,13 @@
 {% load static %}
 {% block content%}
 
-            <div class="home-container">
+            <!-- <div class="home-container">
                 <figure>
                     <img class="home-logo" src="{% static 'blog/logo.png' %}" alt="Hof van Heulerbroek logo">
                 </figure>
-            </div>
+            </div> -->
 
-            <div class="slowfade-wrapper">
+            <!-- <div class="slowfade-wrapper">
                 <div class="slides slowFade">
                     <div class="slide">
                         <img src="{% static 'blog/sfeer_impressie_vanaf_tuin.jpg' %}" alt="img"/>
@@ -29,7 +29,7 @@
                         <img src="{% static 'blog/we_are_building.jpg' %}" alt="img"/>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="home-container">
                 <div class="home-page-slideshow">
@@ -46,6 +46,27 @@
                     <img src="{% static 'blog/we_are_building.jpeg' %}" alt="We zijn aan het bouwen">
                 </div>
             </div> -->
+
+            <div class="slides slowFadeFullscreen">
+                <div class="slideFullscreen">
+                    <img src="{% static 'blog/sfeer_impressie_vanaf_tuin.jpg' %}" alt="img"/>
+                </div>
+                <div class="slideFullscreen">
+                    <img src="{% static 'blog/bed_and_breakfast_scetch.jpg' %}" alt="img"/>
+                </div>
+                <div class="slideFullscreen">
+                    <img src="{% static 'blog/vanaf_rijksweg.jpg' %}" alt="img"/>
+                </div>
+                <div class="slideFullscreen">
+                    <img src="{% static 'blog/up_front_view_scetch.jpg' %}" alt="img"/>
+                </div>
+                <div class="slideFullscreen">
+                    <img src="{% static 'blog/steiger_afbreken.jpg' %}" alt="img"/>
+                </div>
+                <div class="slideFullscreen">
+                    <img src="{% static 'blog/we_are_building.jpg' %}" alt="img"/>
+                </div>
+            </div>
 
             <div class="centered-text">
                 Hof van Heulerbroek heeft op .... Haar deuren geopend. Gelegen in de prachtige natuur van de
@@ -68,7 +89,7 @@
             </div>
 
 
-            <div class="home-container">
+            <!-- <div class="home-container">
                 <div class="video-container">
                     <figure>
                         <img class="home-img" src="{% static 'blog/hofvanheulerbroek.jpg' %}" alt="Hof van Heulerbroek accomodatie">
@@ -89,7 +110,7 @@
 
                 setInterval(showNextImage, 10000); // Change image every 10 seconds
                 });
-            </script>
+            </script> -->
             
               
 {% endblock content%}
