@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import ConferenceRoom, MenuItems, MenuItemsExtraInfo, ConferenceRoomReservation
 from .forms import ConferenceRoomReservationForm
 from django.core.mail import send_mail
@@ -48,20 +48,24 @@ def vergaderruimte(request):
             for key, val in values.items():
                 email_html1 = email_html1.replace('__'+key, val)
                 email_html2 = email_html2.replace('__'+key, val)
-            send_mail(
-                "Aanvraag voor reservering vergaderruimte",
-                email_html1,
-                config('EMAIL_HOST_USER'),
-                [values.get('email')]
-            )
-            send_mail(
-                "Aanvraag voor reservering vergaderruimte",
-                email_html2,
-                config('EMAIL_HOST_USER'),
-                [config('EMAIL_HOST_USER')]
-            )
-            form.save()
-            return redirect("home")
+            try:
+                send_mail(
+                    "Aanvraag voor reservering vergaderruimte",
+                    email_html1,
+                    config('EMAIL_HOST_USER'),
+                    [values.get('email')]
+                )
+                send_mail(
+                    "Aanvraag voor reservering vergaderruimte",
+                    email_html2,
+                    config('EMAIL_HOST_USER'),
+                    [config('EMAIL_HOST_USER')]
+                )
+                form.save()
+                return redirect("root")
+            except:
+                print("Something wrong")
+                return JsonResponse({'success': False, 'message': "Not a known email address"})
 
     else:
         form = ConferenceRoomReservationForm()
